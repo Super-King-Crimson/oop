@@ -12,3 +12,5 @@ pub mod topic {
 
 
 pub mod characteristics;
+
+pub mod trait_objects;
