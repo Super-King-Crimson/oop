@@ -1,4 +1,6 @@
 pub mod gui;
+pub mod type_system_interference;
+pub mod dynamic_dispatch;
 
 pub fn explain() {
     println!("You definitely don't remember this, but remember Chapter 8?");
@@ -9,6 +11,12 @@ pub fn explain() {
 
     //Ok let's make this Gui!
     gui::build();
+
+    //then we'll talk about the downsides of trait objects
+    type_system_interference::explain();
+
+    //and whatever the heck this is!
+    dynamic_dispatch::explain();
 }
 
 //Ok, remember when I said vectors can only store one type? Remember enums? Yeah.
@@ -53,5 +61,14 @@ fn get_back_on_topic() {
         //Like a 'any type works as long as it does X,' where X is something a user can implement?
     
     //Let's make an example Gui tool to work with this idea
+    gui::build();
+    gui::usage::explain();
 
+    //The idea that we only care what a value responds to, and not what its internal values,
+        //is called 🦆 typing (if it walks like a 🦆, talks like a 🦆, quacks like a 🦆, its a 🦆)
+    
+    //If you have a draw, you're a gui element, and you go on the screen
+    //If you can't be drawn, you're not gui element, and you can't go on the screen
+    
+    //It's that simple!
 }
