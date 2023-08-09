@@ -14,3 +14,5 @@ pub mod topic {
 pub mod characteristics;
 
 pub mod trait_objects;
+
+pub mod oop_design_patterns;
